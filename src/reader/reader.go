@@ -2,7 +2,7 @@ package reader
 
 import "ledongthuc/pdf"
 
-func getContent(name string) string {
+func ReadContent(name string) string {
 	file, reader, err := pdf.Open("./pdf/" + name)
 	defer file.Close()
 	if err != nil {
