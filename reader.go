@@ -2,8 +2,8 @@ package PdfReader
 
 import "github.com/ledongthuc/pdf"
 
-func Read(name string) string {
-	file, reader, err := pdf.Open("./pdf/" + name)
+func Read(path string) string {
+	file, reader, err := pdf.Open(path)
 	defer file.Close()
 	if err != nil {
 		panic(err)
@@ -16,6 +16,5 @@ func Read(name string) string {
 			text += item.S
 		}
 	}
-
 	return text
 }
