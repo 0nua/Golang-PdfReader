@@ -9,12 +9,12 @@ func Read(path string) string {
 		panic(err)
 	}
 
-	text := ""
+	content := ""
 	for i := 1; i <= reader.NumPage(); i++ {
-		content := reader.Page(i).Content().Text
-		for _, item := range content {
-			text += item.S
+		text := reader.Page(i).Content().Text
+		for _, item := range text {
+			content += item.S
 		}
 	}
-	return text
+	return content
 }
