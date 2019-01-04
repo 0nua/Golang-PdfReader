@@ -1,6 +1,6 @@
 package PdfReader
 
-import "ledongthuc/pdf/pdf"
+import "github.com/ledongthuc/pdf"
 
 func Read(name string) string {
 	file, reader, err := pdf.Open("./pdf/" + name)
