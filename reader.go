@@ -1,8 +1,8 @@
-package reader
+package PdfReader
 
-import "ledongthuc/pdf"
+import "ledongthuc/pdf/pdf"
 
-func ReadContent(name string) string {
+func Read(name string) string {
 	file, reader, err := pdf.Open("./pdf/" + name)
 	defer file.Close()
 	if err != nil {
